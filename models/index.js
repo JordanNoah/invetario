@@ -42,8 +42,8 @@ Object.keys(db).forEach(modelName => {
 
 console.log(db)
 db.branchOffice.belongsTo(db.institution,{allowNull:false})
-
-
+db.productBranch.belongsTo(db.branchOffice,{allowNull:false})
+db.productBranch.belongsTo(db.product,{allowNull:false})
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
