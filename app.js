@@ -20,8 +20,8 @@ app.use(bodyParser.json())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
+app.use("/public",express.static(path.join(__dirname, 'public')));
+console.error(path.join(__dirname,'public'));
 app.use ('/product',product)
 app.use('/brand', brand)
 

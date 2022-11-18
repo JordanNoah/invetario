@@ -23,6 +23,7 @@ router.post('/save',async (req,res) => {
     var image;
 
     await uploadImage(req,res, async (err) => {
+        console.error(err);
         if (err == undefined) {
             image = req.file
         }else {
@@ -42,5 +43,11 @@ router.post('/save',async (req,res) => {
         res.send(brand)
     })
 })
+
+
+router.get(`/all` , async (req,res) => {
+    var brand = await db.brand.findAll()
+    res.send(brand)
+} )
 
 module.exports = router

@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": "2352169As",
+        "password": "12345",
         "database": "proyecto1",
         "host": "localhost",
         "dialect": "mysql",
@@ -10,7 +10,7 @@
     },
     "test": {
         "username": "root",
-        "password": "2352169As",
+        "password": "12345",
         "database": "proyecto1",
         "host": "localhost",
         "dialect": "mysql",
@@ -18,7 +18,7 @@
     },
     "production": {
         "username": "root",
-        "password": "2352169As",
+        "password": "12345",
         "database": "proyecto1",
         "host": "localhost",
         "dialect": "mysql",
