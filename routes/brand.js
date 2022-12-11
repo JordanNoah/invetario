@@ -50,4 +50,25 @@ router.get(`/all` , async (req,res) => {
     res.send(brand)
 } )
 
+router.put(`/uuid/:uuid` , async (req,res) =>{
+var response = {}
+var uuid= await db.brand.update(
+    {
+        name:req.body.name
+    },
+    {
+        where: {
+            uuid: req.params.uuid
+        }
+    })
+    if (uuid){
+        response.update=true
+    }else{
+        response.update=false
+    }
+   res.send(response)
+} ) 
+
+
+
 module.exports = router

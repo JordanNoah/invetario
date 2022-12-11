@@ -39,9 +39,10 @@ Object.keys(db).forEach(modelName => {
 /**   
  * Asosiaciones   
  */
-db.branchOffice.belongsTo(db.institution, {alowNull : false})
-db.productBranch.belongsTo(db.branchOffice, {alowNull : false})
-db.productBranch.belongsTo(db.product, {alowNull : false})
+db.branchOffice.belongsTo(db.institution, {allowNull : false})
+db.productBranch.belongsTo(db.branchOffice, {allowNull : false})
+db.productBranch.belongsTo(db.product, {allowNull : false})
+db.users.belongsTo(db.institution,{allowNull:false})
 
 //console.log(db)
 
